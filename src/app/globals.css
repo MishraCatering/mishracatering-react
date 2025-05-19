@@ -42,9 +42,287 @@ a {
 }
 
 
-.webpageimg{
+/* Logo */
+
+
+/* Desktop Menu Allignment */
+@media (width >= 992px) {
+  .navbar-expand-lg .navbar-collapse {
+      flex-basis: auto;
+      display: flex !important;
+      justify-content: center;
+      font-weight: 500;
+  }
+}
+
+
+/* Header Special Offer Button */
+.hdr-special-btn {
+  text-decoration: none;
+  background: #000;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+/* Cart Icon */
+.cartbox {
+  width: 50px;
+  height: 50px;
+  background: #0E7EB2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartbox svg {
+  color: #fff;
+  font-size: 27px;
+}
+.hdr-right-blk {
+  display: flex;
+  align-items: center;
+}
+/* Top Header */
+.top-social a img {
+  width: 25px;
+  height: 25px;
+  margin:0px 3px;
+}
+.top-header-mainblk {
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+.top-social {
+  margin-right: 20px;
+}
+.top-call a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+.top-call a svg {
+  color: #0b87ad;
+  font-size: 30px;
+  margin-right: 4px;
+}
+.top-header-mainblk {
+  border-bottom: 1px solid #0000001f;
+  width: 865px;
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
+  padding: 10px 0px;
+}
+
+/* Slider CSs */
+.slider-blk {
+  max-width: 1900px;
+  display: block;
+  margin: auto;
+  /* min-height: 400px; */
+}
+.slider-img{
   max-width: 100%;
+  height: 500px;
+}
+.review{
+  position: relative;
+}
+.slider-blk-bg-img{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.616),rgba(0, 0, 0, 0.568)), url(../../public/images/slider-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+}
+.slider-blk-bg-img2{
+  background-image: url(../../public/images/catering-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+}
+.slider-cntblk {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider-cnt h3{
+  color: #fff;
+  font-size: 40px;
+}
+.slider-cnt p{
+  color: #fff;
+}
+.slider-cnt {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  min-height: 600px;
+}
+.slider-top-img img{
+  max-width: 90%;
   height: auto;
   display: block;
   margin: auto;
+  position: relative;
+  top: 79px;
+}
+.slider-top-img {
+  width: 500px;
+  height: 500px;
+  background: #1140709e;
+  border-radius: 50%;
+  border: 40px solid #d18e16;
+  object-fit: cover;
+  box-shadow: 0px 0px 6px 6px #00000075;
+}
+
+.slider-btn {
+    background: #0c9de1;
+    padding: 10px 22px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 25px;
+}
+.slider-cta-blk {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.menupackagecls{
+  width: 30px;
+  height: 30px;
+}
+
+.menupackagecls {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  padding: 3px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+@media(max-width:768px){
+  .slider-top-img {
+    display: none;
+}
+}
+.custom-pkg-heading-blk>h2{
+  color: #0e7fb4;
+    text-align: center;
+    font-family: 'Pacifico';
+    font-size: 32px;
+    font-weight: 400;
+}
+.custom-pkg-heading-blk>h3{
+  text-align: center;
+  font-family: 'Bitter';
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.custom-pkg-heading-blk>p{
+  text-align: center;
+    font-family: 'Raleway';
+    font-size: 16px;
+}
+.custo-pkg-blk{
+  background-image: url(../../public/images/catering-bg-2.png);
+  background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    max-width: 1900px;
+    display: block;
+    margin: auto;
+    background-size: 100%;
+}
+
+/* Mandap Experiance */
+.mandap-exp-blk {
+    background: #ECF8FD;
+    max-width: 1900px;
+    margin: auto;
+    padding: 30px 0px;
+}
+.mandapexp-sub-blk {
+    display: flex;
+    max-width: 1197px;
+    margin: auto;
+    background: linear-gradient(45deg, #36BAF8, #0F4EB5);
+    padding: 20px;
+    border-radius: 25px;
+}
+@media(max-width:567px){
+  .mandapexp-sub-blk{
+    display: block;
+  }
+  .mandapexpcntbox{
+  padding: 0px !important;
+}
+}
+.mandapexp {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+}
+.mandapexpcntbox{
+  color: #fff;
+  padding: 0px 50px;
+  max-width: 615px;
+}
+.mandapexpcntbox h4{
+    color: #fff;
+    font-family: Pacifico;
+    font-size: 32px;
+    font-weight: 400;
+}
+.madpexp-btnblk{
+  margin: 35px 0px;
+}
+.madpexp-btnblk a {
+    color: #fff;
+    text-decoration: none;
+    background: #000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+}
+.mandpexp-btn-icn {
+    color: #ffb039;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+/* Refer & Offer */
+.reference-blk {
+    background: linear-gradient(86deg, #36BAF8, #3b92d1);
+    max-width: 1900px;
+    margin: auto;
+    padding: 30px 0px;
+}
+.reffer-offer-blk {
+    text-align: center;
+    color: #fff;
+}
+.reffer-bnt-blk{
+  margin: 35px 0px;
+}
+.reffer-bnt-blk a {
+    background: #ff9c21;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    display: inline-flex;
 }

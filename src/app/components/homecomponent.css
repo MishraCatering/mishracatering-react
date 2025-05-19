@@ -1,0 +1,37 @@
+.home-service-cnt>h4{
+        font-family: 'Pacifico';
+        color: #0E7FB4;
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .home-service-cnt>h2 {
+        text-align: center;
+        font-family: 'Bitter';
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .home-service-cnt>p {
+        max-width: 822px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        font-size: 16px;
+        font-family: 'Raleway';
+    }
+    .brd-icon{
+        max-width: 40px;
+        height: 40px;
+    }
+    .brd{
+        width: 300px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.39);
+    }
+    .hm-serv-btm-brd {
+        align-items: center;
+    display: flex;
+    max-width: 700px;
+    margin: auto;
+    justify-content: space-between;
+    }

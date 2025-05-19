@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Marriage Event",
+      "image": "../../../public/images/marriage-event.png",
+      "button": "Book Now →"
+    },
+    {
+      "title": "Corporate Event",
+      "image": "../../../public/images/corporate-event.png",
+      "button": "Book Now →"
+    },
+    {
+      "title": "Birthday Event",
+      "image": "../../../public/images/birthday-event.png",
+      "button": "Book Now →"
+    },
+    {
+      "title": "Bulk Food Delivery",
+      "image": "../../../public/images/bulk-food-delivery.png",
+      "button": "Book Now →"
+    },
+    {
+      "title": "Kitty Party Event",
+      "image": "../../../public/images/kitty-party-event.png",
+      "button": "Book Now →"
+    },
+    {
+      "title": "Bachelor's Party",
+      "image": "../../../public/images/bachelor-party-event.png",
+      "button": "Book Now →"
+    }
+  ]
+  

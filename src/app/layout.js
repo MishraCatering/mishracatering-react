@@ -1,15 +1,27 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import BootstrapClient from "./BootstrapClient.js";
+import { Pacifico, Bitter, Raleway } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  const pacifico = Pacifico({
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-pacifico",
+  });
+  
+  const bitter = Bitter({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    variable: "--font-bitter",
+  });
+  
+  const raleway = Raleway({
+    subsets: ["latin"],
+    weight: ["400", "500", "700"],
+    variable: "--font-raleway",
+  });
 
 export const metadata = {
   title: "Mishra Catering",
@@ -19,7 +31,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${pacifico.variable} ${bitter.variable} ${raleway.variable}`}>
+        <BootstrapClient/>
         {children}
       </body>
     </html>
