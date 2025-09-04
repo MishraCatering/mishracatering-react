@@ -6,15 +6,17 @@ import servcmenuicon from '../../../public/images/menu-icon.png';
 import Image from "next/image";
 import { TfiMenuAlt } from "react-icons/tfi";
 
-const OurServicecard = () =>{
+const OurServicecard = ({categories}) =>{
     return(
         <>
         <div className="servc-card-block">
-            <div className="card-tab"><Link href="">All</Link></div>
-            <div className="card-tab"><Link href="">Delivery Only</Link></div>
-            <div className="card-tab"><Link href="">Delivery+Setup</Link></div>
-            <div className="card-tab"><Link href="">Live Services</Link></div>
-            <div className="card-tab"><Link href="">Others</Link></div>
+            {categories.map((item, index) => {
+                return (
+                    <div className="card-tab" key={index}>
+                        <Link href="">{item.name}</Link>
+                    </div>
+                )
+            })}
         </div>
         <div className="servc-menu-card-blk">
             <div className="servc-menu-card">

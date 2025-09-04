@@ -3,8 +3,9 @@ import Link from "next/link";
 import headerlogo from "../../public/images/Mishra-logo.png";
 import { BsHandbag } from "react-icons/bs";
 
-const HeaDer = () => (
+const HeaDer = ({categories}) => (
   <>
+  {console.log(categories)}
     <div className="header">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
@@ -29,21 +30,13 @@ const HeaDer = () => (
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Buffet
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Meal
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Corporate
-                </Link>
-              </li>
+              {categories.map((item, index) => {
+                return <li className="nav-item" key={index}>
+                  <Link className="nav-link" href="#">
+                    {item.name}
+                  </Link>
+                </li>
+              })}
               <li className="nav-item">
                 <Link className="nav-link" href="#">
                   Contact us

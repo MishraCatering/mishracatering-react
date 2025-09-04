@@ -1,0 +1,1 @@
+export const baseURL = `https://mishracatering-django.vercel.app/api`

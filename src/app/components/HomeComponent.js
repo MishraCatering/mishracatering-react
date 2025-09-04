@@ -9,7 +9,7 @@ import WhyUs from './WhyUs';
 import MandapExp from './MandapExp';
 import RefferOffer from './RefferOffer';
 // import ServiceCategory from './ServiceCategory';
-const HomeComponent = () =>{
+const HomeComponent = ({categories}) =>{
     return (
         <>
         <div className='home-services'>
@@ -24,7 +24,7 @@ const HomeComponent = () =>{
                     <div className='brd-img-blk'><Image className="brd-icon" src={brdimg} alt="border image" /></div>
                     <div className='brd'></div>
                 </div>
-                <OurServicecard/>
+                <OurServicecard categories={categories}/>
             </div>
         </div>
         <div className='prof-catering-banner-blk'>
