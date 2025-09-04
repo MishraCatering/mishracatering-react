@@ -8,7 +8,7 @@ import HeaderBanner from "./HeaderBanner";
 import HomeComponent from "./components/HomeComponent";
 import FooterSection from "./components/FooterSection";
 import { useEffect, useState } from "react";
-import baseURL from "./lib/constants";
+import { baseURL } from "./lib/constants";
 
 
 export default function Home() {
