@@ -15,7 +15,7 @@ export default function Home() {
   const [categories, setCategories] = useState([]);
 
   async function loadCategories() {
-    const res = await fetch(`${baseURL}/api/categories/`)
+    const res = await fetch(`${baseURL}/category/api/categories/`)
     .then(response=>response.json())
     .then((jsonData)=>{ 
       setCategories(jsonData)
