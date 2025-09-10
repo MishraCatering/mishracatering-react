@@ -5,7 +5,6 @@ import { BsHandbag } from "react-icons/bs";
 
 const HeaDer = ({categories}) => (
   <>
-  {console.log(categories)}
     <div className="header">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
