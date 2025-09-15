@@ -31,7 +31,7 @@ const HeaDer = ({categories}) => (
               </li>
               {categories.map((item, index) => {
                 return <li className="nav-item" key={index}>
-                  <Link className="nav-link" href="#">
+                  <Link className="nav-link" href="#servc-card-block">
                     {item.name}
                   </Link>
                 </li>

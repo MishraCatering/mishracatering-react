@@ -120,9 +120,9 @@ const OurServicecard = ({ categories }) => {
 
     return (
         <>
-            <div className="servc-card-block">
+            <div id="servc-card-block" className="servc-card-block">
                 {categories.map((item, index) => (
-                    <div className="card-tab" key={index}>
+                    <div id={`#${item.name}`} className="card-tab" key={index}>
                         <Link href="">{item.name}</Link>
                     </div>
                 ))}
