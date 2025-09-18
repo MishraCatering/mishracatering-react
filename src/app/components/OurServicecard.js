@@ -10,6 +10,7 @@ import { baseURL } from "../lib/constants";
 
 const OurServicecard = ({ categories }) => {
     const [packages, setPackages] = useState([]);
+    const [packageFoods, setPackageFoods] = useState([]);
     const [selectedPackage, setSelectedPackage] = useState([]);
 
     async function loadPackages() {
@@ -17,6 +18,13 @@ const OurServicecard = ({ categories }) => {
         const jsonData = await res.json();
         setPackages(jsonData);
         setSelectedPackage(jsonData);
+    }
+
+    async function loadPackageFoods(packageId) {
+        setPackageFoods([]);
+        const res = await fetch(`${baseURL}/packages/api/${packageId}/package-items/`);
+        const jsonData = await res.json();
+        setPackageFoods(jsonData);
     }
 
     function filterPackages(category) {
@@ -65,6 +73,7 @@ const OurServicecard = ({ categories }) => {
                                     className="btn btn-dark"
                                     data-bs-toggle="modal"
                                     data-bs-target={`#${modalId}`}
+                                    onClick={()=>loadPackageFoods(item.id)}
                                 >
                                     Check Details
                                 </button>
@@ -91,13 +100,15 @@ const OurServicecard = ({ categories }) => {
                                                 ></button>
                                             </div>
                                             <div className="modal-body">
-                                                {/* <p><strong>Package Size:</strong> {item.size_description}</p>
                                                 <ul>
-                                                    {item.line_1 && <li>{item.line_1}</li>}
-                                                    {item.line_2 && <li>{item.line_2}</li>}
-                                                    {item.line_3 && <li>{item.line_3}</li>}
-                                                </ul> */}
-                                                <h5>CALL API HERE TO SHOW PACKAGE ITEM DETAILS</h5>
+                                                    {packageFoods.length==0 && <p>Loading...</p>}
+                                                    {packageFoods.map((food,index)=>{
+                                                        return(
+                                                        <li key={index}>{food.food_item_name}</li>
+                                                    )
+                                                    })}
+                                                    
+                                                </ul>
                                             </div>
                                             <div className="modal-footer">
                                                 <button
@@ -105,7 +116,7 @@ const OurServicecard = ({ categories }) => {
                                                     className="btn btn-danger"
                                                     data-bs-dismiss="modal"
                                                 >
-                                                    Cancel Order
+                                                    Cancel
                                                 </button>
                                                 <button type="button" className="btn btn-primary">
                                                     Book Order
