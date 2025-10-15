@@ -10,9 +10,9 @@ const TopHeader =() =>(
             <div className="top-header-mainblk">
                 <div className="top-social">
                     <span>Follow us on : - </span>
-                    <a href=""><Image src={facebook} /></a>
-                    <a href=""><Image src={instagram} /></a>
-                    <a href=""><Image src={youtube} /></a>
+                    <a href=""><Image src={facebook} alt="facebook" /></a>
+                    <a href=""><Image src={instagram} alt="instagram"/></a>
+                    <a href=""><Image src={youtube} alt="youtube"/></a>
                 </div>
                 <div className="top-call">
                     <a href="tel:9337636010"><BiPhoneCall />

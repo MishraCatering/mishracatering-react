@@ -6,6 +6,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import menucateringimg from '../../../public/images/catering-image.png';
 import servcmenuicon from '../../../public/images/menu-icon.png';
 import Image from "next/image";
+import vegIconImage from "../../../public/images/veg.png";
+import nonVedIconImage from "../../../public/images/non_veg.png";
 import { baseURL } from "../lib/constants";
 
 const OurServicecard = ({ categories }) => {
@@ -22,7 +24,7 @@ const OurServicecard = ({ categories }) => {
 
     async function loadPackageFoods(packageId) {
         setPackageFoods([]);
-        const res = await fetch(`${baseURL}/packages/api/${packageId}/package-items/`);
+        const res = await fetch(`${baseURL}/packages/api/${packageId}/grouped-items/`);
         const jsonData = await res.json();
         setPackageFoods(jsonData);
     }
@@ -100,26 +102,26 @@ const OurServicecard = ({ categories }) => {
                                                 ></button>
                                             </div>
                                             <div className="modal-body">
-                                                <ul>
                                                     {packageFoods.length==0 && <p>Loading...</p>}
-                                                    {packageFoods.map((food,index)=>{
+                                                    {packageFoods.map((food, index)=>{
                                                         return(
-                                                        <li key={index}>{food.food_item_name}</li>
+                                                            <div key={index}>
+                                                        <p style={{fontWeight: 'bold', marginBottom:0}}>{food.food_category_name}</p>
+                                                        {food.food_items.map((item, i)=>{
+                                                            return(
+                                                                <div key={i} className='d-flex align-item-center'>
+                                                                    <Image src={ item.food_type=='veg'? nonVedIconImage: vegIconImage} alt='veg_icon' height={25} width={25}/>
+                                                                    <p>{item.name}</p>
+                                                                </div>
+                                                            )
+                                                        })}
+                                                        </div>
                                                     )
                                                     })}
-                                                    
-                                                </ul>
                                             </div>
                                             <div className="modal-footer">
-                                                <button
-                                                    type="button"
-                                                    className="btn btn-danger"
-                                                    data-bs-dismiss="modal"
-                                                >
-                                                    Cancel
-                                                </button>
                                                 <button type="button" className="btn btn-primary">
-                                                    Book Order
+                                                    Book Order @ {item.price}
                                                 </button>
                                             </div>
                                         </div>
